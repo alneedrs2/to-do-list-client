@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useItems = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/get-todo/")
+    fetch(" https://tragically-inukshuk-07162.herokuapp.com/get-todo/")
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);

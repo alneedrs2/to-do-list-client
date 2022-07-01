@@ -11,10 +11,12 @@ const ToDo = () => {
     const time = e.target.time.value;
     console.log(task, date, time);
 
-    toast.success("Your ToDo added successfully. Refresh the page to see your todo.");
+    toast.success(
+      "Your ToDo added successfully. Refresh the page to see your todo."
+    );
     const taskDetails = { task, date, time };
 
-    fetch("http://localhost:5000/get-todo", {
+    fetch(" https://tragically-inukshuk-07162.herokuapp.com/get-todo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

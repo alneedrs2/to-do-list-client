@@ -9,7 +9,7 @@ const Update = (data) => {
   const [items, setItems] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/get-todo/${id}`;
+    const url = ` https://tragically-inukshuk-07162.herokuapp.com/get-todo/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItems(data));
@@ -21,7 +21,7 @@ const Update = (data) => {
     const updateItems = { task };
     console.log(task);
 
-    const url = `http://localhost:5000/get-todo/${id}`;
+    const url = ` https://tragically-inukshuk-07162.herokuapp.com/get-todo/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -37,13 +37,11 @@ const Update = (data) => {
       });
   };
   const handleCheak = () => {
-    toast.success(
-      "Successfully Updated."
-    );
+    toast.success("Successfully Updated.");
   };
   return (
-    <div className="container">
-      <h2 className="text-2xl font-bold text-accent">
+    <div className="container mx-auto">
+      <h2 className="text-2xl my-5 font-bold text-accent">
         Updating Task: {items.task}
       </h2>
       <form onSubmit={handelAdd}>
@@ -59,7 +57,7 @@ const Update = (data) => {
           })}
         />
         <input
-          className="btn w-96 btn-primary text-white"
+          className="btn my-3 w-96 btn-primary text-white"
           type="submit"
           onChange={handleCheak}
           value="Update"

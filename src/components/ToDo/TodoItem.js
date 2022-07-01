@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ToDoItem = (props) => {
   const [task, setTask] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/get-todo")
+    fetch(" https://tragically-inukshuk-07162.herokuapp.com/get-todo")
       .then((res) => res.json())
       .then((data) => setTask(data));
   }, []);
