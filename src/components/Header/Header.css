@@ -1,0 +1,18 @@
+.header-style {
+  border-bottom: 1px solid rgb(231, 77, 103);
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(83, 188, 206, 0.493), 
+  rgba(207, 80, 7, 0.514));
+}
+.head-item {
+  font-family: cursive;
+  border-top: 2px solid rgb(22, 146, 218);
+  border-bottom: 2px solid red;
+}
+.next-items {
+  color: white;
+  font-weight: 500;
+  background-color: rgba(211, 14, 47, 0.527);
+  margin-left: 10px;
+  border-radius: 10px;
+}
